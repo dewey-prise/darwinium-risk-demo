@@ -32,6 +32,8 @@
 
     --score-medium-bg: #f5b544;
     --score-medium-text: #1a1200;
+    --score-high-bg: #ef5350;
+    --score-high-text: #ffffff;
     --score-low-text: #3ecf87;
 
     --icon-warn: #f5b544;
@@ -186,6 +188,11 @@
     color: var(--score-medium-text);
   }
 
+  .score-value.high {
+    background: var(--score-high-bg);
+    color: var(--score-high-text);
+  }
+
   .score-value.low {
     background: transparent;
     color: var(--severity-low);
@@ -202,6 +209,7 @@
   }
 
   .score-label.medium { color: var(--severity-medium); }
+  .score-label.high { color: var(--severity-high); }
   .score-label.low { color: var(--severity-low); }
 
   /* ---- Subsections ---- */
@@ -367,7 +375,8 @@
   }
 
   /* Score value tweak for Darwinium to match reference more closely */
-  .panel-darwinium .score-value.medium {
+  .panel-darwinium .score-value.medium,
+  .panel-darwinium .score-value.high {
     font-size: 30px;
   }
 
@@ -419,9 +428,9 @@
         <div class="panel-summary">Risk escalating — 4 failed attempts across device signature, typing rhythm unusual, proxy persists</div>
       </div>
       <div class="score">
-        <div class="score-value medium">0.40</div>
-        <div class="score-label medium">
-          <span>MEDIUM</span>
+        <div class="score-value high">0.75</div>
+        <div class="score-label high">
+          <span>HIGH</span>
           <span>RISK</span>
         </div>
       </div>
